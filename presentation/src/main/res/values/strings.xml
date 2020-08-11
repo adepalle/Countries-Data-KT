@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Countries Data</string>
+    <string name="item_country_name_placeholder">Country Name</string>
+    <string name="item_country_native_name_placeholder">Country Native Name</string>
+
+    <string name="desc_name">Nom : </string>
+    <string name="desc_alpha2Code">Code Alpha : </string>
+    <string name="desc_native_name">Nom natif: </string>
+    <string name="desc_region">Region et sous region : </string>
+    <string name="desc_subregion">Sous région : </string>
+    <string name="desc_lat_long">Informations géographiques : </string>
+    <string name="desc_latitude">Latitude :</string>
+    <string name="desc_longitude">Longitude : </string>
+    <string name="desc_area">Surface :</string>
+    <string name="desc_area2">\ km²</string>
+    <string name="desc_nativeLanguage">Langue : </string>
+    <string name="desc_currency">Monnaie : </string>
+</resources>

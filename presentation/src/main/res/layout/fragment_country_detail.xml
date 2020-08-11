@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Informations Détaillées"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_name_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@string/desc_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/fragment_country_detail_name_desc"
+                app:layout_constraintTop_toTopOf="@+id/fragment_country_detail_name_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_native_name_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@string/desc_native_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_name_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_native_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/fragment_country_detail_native_name_desc"
+                app:layout_constraintTop_toTopOf="@+id/fragment_country_detail_native_name_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_region_subregion_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@string/desc_region"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_native_name_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_region_subregion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/fragment_country_detail_region_subregion_desc"
+                app:layout_constraintTop_toTopOf="@+id/fragment_country_detail_region_subregion_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_info_geo_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@string/desc_lat_long"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_region_subregion_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_latitude_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="0.75"
+                android:text="@string/desc_latitude"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_info_geo_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_latitude"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/fragment_country_detail_latitude_desc"
+                app:layout_constraintTop_toTopOf="@+id/fragment_country_detail_latitude_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_longitude_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0.75"
+                android:text="@string/desc_longitude"
+                app:layout_constraintStart_toStartOf="@+id/fragment_country_detail_latitude_desc"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_latitude_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_longitude"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/fragment_country_detail_longitude_desc"
+                app:layout_constraintTop_toTopOf="@+id/fragment_country_detail_longitude_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_area_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@string/desc_area"
+                app:layout_constraintStart_toStartOf="@+id/fragment_country_detail_info_geo_desc"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_longitude_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/fragment_country_detail_area_desc"
+                app:layout_constraintTop_toTopOf="@+id/fragment_country_detail_area_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_lang_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@string/desc_nativeLanguage"
+                app:layout_constraintStart_toStartOf="@+id/fragment_country_detail_area_desc"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_area_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_lang"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/fragment_country_detail_lang_desc"
+                app:layout_constraintTop_toTopOf="@+id/fragment_country_detail_lang_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_alpha_code_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@string/desc_alpha2Code"
+                app:layout_constraintStart_toStartOf="@+id/fragment_country_detail_lang_desc"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_lang_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_alpha_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                app:layout_constraintStart_toEndOf="@+id/fragment_country_detail_alpha_code_desc"
+                app:layout_constraintTop_toTopOf="@+id/fragment_country_detail_alpha_code_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_currency_desc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@string/desc_currency"
+                app:layout_constraintStart_toStartOf="@+id/fragment_country_detail_alpha_code_desc"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_alpha_code_desc" />
+
+            <TextView
+                android:id="@+id/fragment_country_detail_currency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@+id/fragment_country_detail_currency_desc"
+                app:layout_constraintTop_toTopOf="@+id/fragment_country_detail_currency_desc" />
+
+
+            <ImageView
+                android:id="@+id/fragment_country_detail_flag_thumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:layout_margin="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragment_country_detail_currency_desc" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
