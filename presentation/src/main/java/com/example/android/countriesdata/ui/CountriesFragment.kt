@@ -2,8 +2,14 @@ package com.example.android.countriesdata.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import androidx.lifecycle.Observer
 import com.example.android.countriesdata.R
 import com.example.android.countriesdata.adapter.CountriesAdapter
@@ -21,6 +27,30 @@ class CountriesFragment : BaseVMFragment<CountriesViewModel>() {
     lateinit var navigatorListener: CountriesFragmentNavigatorListener
 
     override val viewModelClass = CountriesViewModel::class
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.action_bar_spinner, menu)
+        val menuItem = menu.findItem(R.id.action_bar_spinner_item)
+        val spinner = menuItem.actionView as Spinner
+        val regions = resources.getStringArray(R.array.Regions)
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_dropdown_item, regions)
+        spinner.adapter = adapter
+        spinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onNothingSelected(p0: AdapterView<*>?) {
+                TODO("Not yet implemented")
+            }
+
+            override fun onItemSelected(parent: AdapterView<*>,
+                                        view: View, position: Int, id: Long) {
+                countriesAdapter.filter(regions[position])
+            }
+        }
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,

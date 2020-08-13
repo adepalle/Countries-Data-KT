@@ -15,4 +15,15 @@
     <string name="desc_area2">\ km²</string>
     <string name="desc_nativeLanguage">Langue : </string>
     <string name="desc_currency">Monnaie : </string>
+    <string name="action_bar_spinner_title">Pick a region</string>
+
+    <string-array name="Regions">
+        <item>All</item>
+        <item>Africa</item>
+        <item>Americas</item>
+        <item>Asia</item>
+        <item>Europe</item>
+        <item>Oceania</item>
+        <item>Polar</item>
+    </string-array>
 </resources>
